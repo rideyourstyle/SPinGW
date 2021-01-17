@@ -4,7 +4,7 @@
 
 enum Baudrate
 {
-	B50	= 50,
+	B50     = 50,
 	B110	= 110,
 	B150	= 150,
 	B300	= 300,
@@ -49,7 +49,7 @@ void ErrorExit(LPTSTR lpszFunction);
 	\param parity		the parity (even, odd, off or mark)
 	\return			HANDLE to the serial port
 	*/
-HANDLE openSerialPort(LPCSTR portname,enum Baudrate baudrate, enum Stopbits stopbits, enum Paritycheck parity);
+HANDLE openSerialPort(LPCSTR portname, enum Baudrate baudrate, enum Stopbits stopbits, enum Paritycheck parity);
 
 /**
 	\brief Read data from the serial port

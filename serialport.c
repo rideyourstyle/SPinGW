@@ -24,7 +24,7 @@ void ErrorExit(LPTSTR lpszFunction)
     // Display the error message and exit the process
 
     lpDisplayBuf = (LPVOID)LocalAlloc(LMEM_ZEROINIT, 
-        (lstrlen((LPCTSTR)lpMsgBuf) + lstrlen((LPCTSTR)lpszFunction) + 40) * sizeof(TCHAR)); 
+        (lstrlen((LPCTSTR)lpMsgBuf) + lstrlen((LPCTSTR)lpszFunction) + 40) * sizeof(TCHAR));
     sprintf((LPTSTR)lpDisplayBuf, TEXT("%s failed with error %d:\n%s"), lpszFunction, dw, lpMsgBuf); 
     MessageBox(NULL, (LPCTSTR)lpDisplayBuf, TEXT("Error"), MB_OK); 
 
@@ -43,9 +43,9 @@ void ErrorExit(LPTSTR lpszFunction)
 	\param parity		the parity (even, odd, off or mark)
 	\return			HANDLE to the serial port
 	*/
-HANDLE openSerialPort(LPCSTR portname,enum Baudrate baudrate, enum Stopbits stopbits, enum Paritycheck parity)
+HANDLE openSerialPort(LPCSTR portname, enum Baudrate baudrate, enum Stopbits stopbits, enum Paritycheck parity)
 {
-	DWORD  accessdirection =GENERIC_READ | GENERIC_WRITE;
+	DWORD  accessdirection = GENERIC_READ | GENERIC_WRITE;
 	HANDLE hSerial = CreateFile(portname,
 		accessdirection,
 		0,
