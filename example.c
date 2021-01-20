@@ -2,7 +2,6 @@
 #include "serialport.h"
 
 
-
 int main(void) {
 	HANDLE h = openSerialPort("COM1",B9600,one,off);
 
